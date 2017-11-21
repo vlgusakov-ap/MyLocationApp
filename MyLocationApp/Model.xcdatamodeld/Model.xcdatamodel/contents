@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13771" systemVersion="17C67b" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ContactData" representedClassName="ContactData" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="receivedPlaces" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlaceData" inverseName="sentToContacts" inverseEntity="PlaceData" syncable="YES"/>
+        <relationship name="sentPlaces" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlaceData" inverseName="receivedFromContacts" inverseEntity="PlaceData" syncable="YES"/>
+    </entity>
+    <entity name="PlaceData" representedClassName="PlaceData" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="receivedFromContacts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ContactData" inverseName="sentPlaces" inverseEntity="ContactData" syncable="YES"/>
+        <relationship name="sentToContacts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ContactData" inverseName="receivedPlaces" inverseEntity="ContactData" syncable="YES"/>
+    </entity>
+    <entity name="UserData" representedClassName="UserData" syncable="YES" codeGenerationType="class">
+        <attribute name="isLoggedIn" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ContactData" positionX="-18" positionY="45" width="128" height="120"/>
+        <element name="PlaceData" positionX="214" positionY="45" width="128" height="165"/>
+        <element name="UserData" positionX="-243" positionY="36" width="128" height="73"/>
+    </elements>
+</model>

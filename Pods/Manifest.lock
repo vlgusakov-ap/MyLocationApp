@@ -1,0 +1,51 @@
+PODS:
+  - AlecrimCoreData (5.0)
+  - DeckTransition (1.4.2)
+  - GoogleMaps (2.5.0):
+    - GoogleMaps/Maps (= 2.5.0)
+  - GoogleMaps/Base (2.5.0)
+  - GoogleMaps/Maps (2.5.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.5.0):
+    - GoogleMaps/Base (= 2.5.0)
+  - PhoneNumberKit (2.0.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 2.0.0)
+    - PhoneNumberKit/UIKit (= 2.0.0)
+  - PhoneNumberKit/PhoneNumberKitCore (2.0.0)
+  - PhoneNumberKit/UIKit (2.0.0):
+    - PhoneNumberKit/PhoneNumberKitCore
+  - Reusable (4.0.0):
+    - Reusable/Storyboard (= 4.0.0)
+    - Reusable/View (= 4.0.0)
+  - Reusable/Storyboard (4.0.0)
+  - Reusable/View (4.0.0)
+
+DEPENDENCIES:
+  - AlecrimCoreData (from `https://github.com/vlgusakov-ap/AlecrimCoreData.git`, branch `master`)
+  - DeckTransition
+  - GoogleMaps
+  - GooglePlaces
+  - PhoneNumberKit
+  - Reusable
+
+EXTERNAL SOURCES:
+  AlecrimCoreData:
+    :branch: master
+    :git: https://github.com/vlgusakov-ap/AlecrimCoreData.git
+
+CHECKOUT OPTIONS:
+  AlecrimCoreData:
+    :commit: 222dc58d3c24f3932dd27b990371b1494bb7022b
+    :git: https://github.com/vlgusakov-ap/AlecrimCoreData.git
+
+SPEC CHECKSUMS:
+  AlecrimCoreData: d49aa3aa220b982b5835f9b6f7b996ffda9a129e
+  DeckTransition: 56330226ddbefd2ddc9f57b8b56d37e0e93e6b91
+  GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
+  GooglePlaces: dd70d9d71ea1c7944846afe67de3712c99b30a77
+  PhoneNumberKit: 073b3cef30c2a64ddcd623ea5953bc84bb5b3fc4
+  Reusable: 98e5fff1e0e2e00872199699b276dde08ee56c07
+
+PODFILE CHECKSUM: 542693992dc4e23504ef9bd80e8403d3e16651c3
+
+COCOAPODS: 1.2.1

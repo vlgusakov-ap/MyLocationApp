@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapView" customModule="MyLocationApp" customModuleProvider="target">
+            <connections>
+                <outlet property="disabledLocationView" destination="Isa-jT-7Tf" id="Cbt-W8-goc"/>
+                <outlet property="mapView" destination="A3U-HB-756" id="clP-jY-Hqa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="465" height="344"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A3U-HB-756" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="0.0" width="465" height="344"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Isa-jT-7Tf">
+                    <rect key="frame" x="0.0" y="0.0" width="465" height="344"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7lU-qA-Aip">
+                        <rect key="frame" x="0.0" y="0.0" width="465" height="344"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehx-eh-r8o">
+                                <rect key="frame" x="132" y="155.5" width="201" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Allow location in Settings">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressSettingsButton:" destination="-1" eventType="touchUpInside" id="d1g-BS-DUa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ehx-eh-r8o" secondAttribute="trailing" constant="20" id="01b-TU-3VK"/>
+                            <constraint firstItem="Ehx-eh-r8o" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7lU-qA-Aip" secondAttribute="leading" constant="20" id="cht-Rb-ZeN"/>
+                            <constraint firstItem="Ehx-eh-r8o" firstAttribute="centerY" secondItem="7lU-qA-Aip" secondAttribute="centerY" id="dlQ-MB-ELh"/>
+                            <constraint firstItem="Ehx-eh-r8o" firstAttribute="centerX" secondItem="7lU-qA-Aip" secondAttribute="centerX" id="vgo-Om-dGU"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="A3U-HB-756" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="0tS-oQ-qCt"/>
+                <constraint firstItem="Isa-jT-7Tf" firstAttribute="top" secondItem="A3U-HB-756" secondAttribute="top" id="1eR-0X-eoq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="A3U-HB-756" secondAttribute="bottom" id="3xI-mQ-Li9"/>
+                <constraint firstItem="A3U-HB-756" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7vk-oZ-yc3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="A3U-HB-756" secondAttribute="trailing" id="CXE-Ia-e6b"/>
+                <constraint firstItem="Isa-jT-7Tf" firstAttribute="trailing" secondItem="A3U-HB-756" secondAttribute="trailing" id="JLt-ez-aoq"/>
+                <constraint firstItem="Isa-jT-7Tf" firstAttribute="leading" secondItem="A3U-HB-756" secondAttribute="leading" id="Qxo-Va-WSn"/>
+                <constraint firstItem="Isa-jT-7Tf" firstAttribute="bottom" secondItem="A3U-HB-756" secondAttribute="bottom" id="cgy-gF-WbZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="78.5" y="308"/>
+        </view>
+    </objects>
+</document>
